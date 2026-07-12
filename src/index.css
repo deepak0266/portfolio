@@ -73,6 +73,62 @@ body {
   background: var(--color-surface);
 }
 
+.contact-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.96) 0%, rgba(15, 23, 42, 0.93) 100%);
+  box-shadow: 0 25px 90px rgba(15, 23, 42, 0.18), 0 4px 20px rgba(15, 23, 42, 0.12);
+  border-radius: 28px;
+  padding: 1.5rem;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(34, 211, 238, 0.12), transparent 24%),
+              radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.1), transparent 30%);
+  pointer-events: none;
+  opacity: 0.9;
+  mix-blend-mode: screen;
+}
+
+.contact-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-input {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  color: var(--color-text);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.contact-input:focus {
+  border-color: rgba(34, 211, 238, 0.65);
+  box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.12);
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.contact-button {
+  background: linear-gradient(135deg, #22d3ee, #3b82f6);
+  color: white;
+  box-shadow: 0 16px 32px rgba(34, 211, 238, 0.18);
+  border: none;
+}
+
+.contact-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.contact-button:focus-visible {
+  outline: 3px solid rgba(34, 211, 238, 0.45);
+  outline-offset: 3px;
+}
+
 .project-card:hover,
 .section-card:hover {
   border-color: rgba(34, 211, 238, 0.32);

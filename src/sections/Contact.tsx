@@ -104,9 +104,9 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 space-y-4"
+          className="contact-card p-6 space-y-5"
         >
-          <p className="text-xs text-[var(--color-dim)] font-mono">
+          <p className="text-xs text-[var(--color-muted)] font-mono leading-relaxed">
             This form opens your email client with the message pre-filled — this site has no backend.
           </p>
           <div>
@@ -118,7 +118,7 @@ export default function Contact() {
               required
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
-              className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3.5 py-2.5 text-sm outline-none focus:border-[var(--color-cyan)] transition-colors"
+              className="contact-input w-full rounded-2xl px-4 py-3 text-sm outline-none"
               placeholder="Your name"
             />
           </div>
@@ -132,7 +132,7 @@ export default function Contact() {
               required
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
-              className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3.5 py-2.5 text-sm outline-none focus:border-[var(--color-cyan)] transition-colors"
+              className="contact-input w-full rounded-2xl px-4 py-3 text-sm outline-none"
               placeholder="you@company.com"
             />
           </div>
@@ -143,16 +143,16 @@ export default function Contact() {
             <textarea
               id="message"
               required
-              rows={4}
+              rows={5}
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
-              className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-3.5 py-2.5 text-sm outline-none focus:border-[var(--color-cyan)] transition-colors resize-none"
+              className="contact-input w-full rounded-2xl px-4 py-3 text-sm outline-none resize-none"
               placeholder="What are you building?"
             />
           </div>
           <button
             type="submit"
-            className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[var(--color-primary)] text-white text-sm font-medium hover:brightness-110 transition"
+            className="contact-button w-full flex items-center justify-center gap-2 px-5 py-3 rounded-2xl text-sm font-semibold"
           >
             <FiSend size={14} /> Send message
           </button>
