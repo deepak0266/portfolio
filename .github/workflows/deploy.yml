@@ -28,6 +28,7 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
+          name: portfolio-pages-artifact
 
   deploy:
     needs: build
@@ -38,3 +39,5 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: portfolio-pages-artifact
