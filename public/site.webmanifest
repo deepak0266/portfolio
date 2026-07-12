@@ -1,0 +1,13 @@
+{
+  "name": "Deepak Baghel - System & Full-Stack Engineer",
+  "short_name": "Deepak Baghel",
+  "description": "Portfolio of Deepak Baghel, System Engineer at OYO",
+  "start_url": "/portfolio/",
+  "scope": "/portfolio/",
+  "display": "standalone",
+  "background_color": "#0A0E14",
+  "theme_color": "#0A0E14",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
